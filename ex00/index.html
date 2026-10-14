@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal portfolio of Nada Alrbeihat, cybersecurity student and web developer.">
+  <title>Nada Alrbeihat | Portfolio</title>
+
+  <!-- Monogram favicon (no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b4f8a'/%3E%3Ctext x='32' y='44' font-size='36' font-family='Georgia,serif' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Playfair Display (headings), Inter (body), Amiri + IBM Plex Sans Arabic (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#about" class="logo" aria-label="Nada Alrbeihat">Nada<span>.</span></a>
+
+      <nav id="main-nav" class="nav-links" aria-label="Main navigation">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#training" data-i18n="nav_training">Training</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#hobbies" data-i18n="nav_hobbies">Hobbies</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- BONUS: language switcher -->
+        <button id="lang-toggle" class="btn-icon" type="button" data-i18n-aria="aria_lang">العربية</button>
+        <!-- MANDATORY: theme switcher -->
+        <button id="theme-toggle" class="btn-icon" type="button" data-i18n-aria="aria_theme" aria-pressed="false">
+          <svg class="icon icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <svg class="icon icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button id="menu-toggle" class="btn-icon menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="aria_menu">
+          <svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ ABOUT ME ============ -->
+    <section id="about" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hello" data-i18n="hero_hello">Hi, I'm</p>
+          <h1 data-i18n="hero_name">Nada Alrbeihat</h1>
+          <p class="role" data-i18n="hero_role">Cybersecurity student &amp; web developer</p>
+          <p class="lead" data-i18n="hero_bio">I'm a CompTIA Security+ certified cybersecurity student trained at Jordan's National Cybersecurity Center. I build secure, responsive web projects, support students with disabilities as a volunteer, and write about national cybersecurity events as a technology journalist.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="assets/cv_nada.pdf" download data-i18n="hero_cv">Download CV</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="hero_contact">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Profile photo -->
+        <figure class="hero-photo">
+          <div class="photo-frame">
+            <img id="profile-photo" src="assets/profile-casual.jpg" data-i18n-alt="photoAlt" alt="Nada sitting in a blue vintage café" width="720" height="960">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS GRID ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 data-i18n="skills_title">Skills</h2>
+        <ul class="grid">
+          <li class="card">
+            <h3>Python</h3>
+            <p data-i18n="skill_python">Full-stack apps, bots and automation.</p>
+          </li>
+          <li class="card">
+            <h3>JavaScript</h3>
+            <p data-i18n="skill_js">DOM manipulation and interactive pages.</p>
+          </li>
+          <li class="card">
+            <h3>HTML &amp; CSS</h3>
+            <p data-i18n="skill_html">Semantic markup, Flexbox, responsive design.</p>
+          </li>
+          <li class="card">
+            <h3>C++ &amp; SQL</h3>
+            <p data-i18n="skill_cpp">Core programming and database queries.</p>
+          </li>
+          <li class="card">
+            <h3 data-i18n="skill_net_t">Networking</h3>
+            <p data-i18n="skill_net">TCP/IP, VLANs, firewalls, VPNs (CCNA).</p>
+          </li>
+          <li class="card">
+            <h3 data-i18n="skill_linux_t">Linux</h3>
+            <p data-i18n="skill_linux">Ubuntu and Kali, command line workflows.</p>
+          </li>
+          <li class="card">
+            <h3 data-i18n="skill_sec_t">Security &amp; GRC</h3>
+            <p data-i18n="skill_sec">Risk assessment, access control, secure coding.</p>
+          </li>
+          <li class="card">
+            <h3>Git</h3>
+            <p data-i18n="skill_git">Version control with clear, step-by-step commits.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TRAINING & CV ============ -->
+    <section id="training" class="section section-alt">
+      <div class="container">
+        <h2 data-i18n="training_title">Training</h2>
+
+        <!-- Current training (42 Amman, in partnership with the Crown Prince Foundation and Abdulla Al Ghurair Foundation) -->
+        <article class="card featured">
+          <p class="badge" data-i18n="latest_badge">Currently training</p>
+          <h3 data-i18n="t42_title">Web Development &amp; Cybersecurity at 42 Amman</h3>
+          <p class="org" data-i18n="t42_org">42 Amman, a Crown Prince Foundation program, in partnership with the Abdulla Al Ghurair Foundation</p>
+          <p data-i18n="t42_desc">A tuition-free training program in web development and cybersecurity at 42 Amman, a Crown Prince Foundation program within the global 42 network, in partnership with the Abdulla Al Ghurair Foundation. I am still enrolled. It is project-based with no teachers: learning happens peer to peer, and every exercise is reviewed and defended in front of fellow students.</p>
+          <ul class="tags">
+            <li data-i18n="t42_tag1">Linux &amp; shell</li>
+            <li data-i18n="t42_tag2">Git</li>
+            <li data-i18n="t42_tag3">HTML &amp; CSS</li>
+            <li data-i18n="t42_tag4">JavaScript</li>
+            <li data-i18n="t42_tag6">Cybersecurity</li>
+            <li data-i18n="t42_tag5">Peer evaluation</li>
+          </ul>
+        </article>
+
+        <!-- Previous trainings -->
+        <ul class="grid">
+          <li class="card">
+            <h3 data-i18n="tr1_title">Cyber Advance for Women in MENA</h3>
+            <p class="org" data-i18n="tr1_org">Correlation One, remote · June to November 2025</p>
+            <p data-i18n="tr1_desc">A 22-week program covering networking, security controls, threat analysis, incident response and risk management, with 16 labs and projects and 17 real-world case studies.</p>
+          </li>
+          <li class="card">
+            <h3 data-i18n="tr2_title">Masar Training Program</h3>
+            <p class="org" data-i18n="tr2_org">National Cybersecurity Center, Jordan</p>
+            <p data-i18n="tr2_desc">Hands-on cybersecurity training delivered by Jordan's national center.</p>
+          </li>
+          <li class="card">
+            <h3 data-i18n="tr3_title">Advanced GRC Course</h3>
+            <p class="org" data-i18n="tr3_org">Green Circle, Youth Grow Activity</p>
+            <p data-i18n="tr3_desc">Governance, risk and compliance, including a GRC training track certificate.</p>
+          </li>
+          <li class="card">
+            <h3 data-i18n="edu_title">Education</h3>
+            <p class="org" data-i18n="edu_org">Al-Balqa Applied University</p>
+            <p data-i18n="edu_desc">B.Sc. in Cybersecurity, 2026.</p>
+          </li>
+        </ul>
+
+        <h3 class="subtitle" data-i18n="certs_title">Certifications</h3>
+        <ul class="tags">
+          <li>CompTIA Security+</li>
+          <li data-i18n="cert_ccna">CCNA (Cisco)</li>
+          <li data-i18n="cert_linux">Linux 101</li>
+          <li data-i18n="cert_sumo">SUMO Robotics Workshop</li>
+          <li data-i18n="cert_active">Active Defense: The New Frontier in Cybersecurity</li>
+        </ul>
+
+        <a class="btn btn-primary cv-button" href="assets/cv_nada.pdf" download data-i18n="hero_cv">Download CV</a>
+      </div>
+    </section>
+
+    <!-- ============ PROJECT SHOWCASE (Projects 00-03) ============ -->
+    <!-- TODO: replace the titles, descriptions and the "#" links with YOUR real Project 00-03 repositories -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 data-i18n="projects_title">Projects</h2>
+        <!-- Each card links to the real GitHub repository -->
+        <ul class="grid grid-wide">
+          <li class="card project">
+            <h3 data-i18n="p0_title">Project 00: Linux &amp; Git</h3>
+            <p data-i18n="p0_desc">Four shell and Git exercises, including a file-management script.</p>
+            <a class="link" href="https://github.com/nadarbeihat/discovery-web-piscine" target="_blank" rel="noopener" data-i18n="view_project">View on GitHub</a>
+          </li>
+          <li class="card project">
+            <h3 data-i18n="p1_title">Project 01: HTML</h3>
+            <p data-i18n="p1_desc">Six exercises building web pages with semantic HTML.</p>
+            <a class="link" href="https://github.com/nadarbeihat/project-1-" target="_blank" rel="noopener" data-i18n="view_project">View on GitHub</a>
+          </li>
+          <li class="card project">
+            <h3 data-i18n="p2_title">Project 02: Web pages</h3>
+            <p data-i18n="p2_desc">Seven exercises building and styling web pages.</p>
+            <a class="link" href="https://github.com/nadarbeihat/project-2-" target="_blank" rel="noopener" data-i18n="view_project">View on GitHub</a>
+          </li>
+          <li class="card project">
+            <h3 data-i18n="p3_title">Project 03: JavaScript</h3>
+            <p data-i18n="p3_desc">Five exercises bringing pages to life with JavaScript.</p>
+            <a class="link" href="https://github.com/nadarbeihat/project-3" target="_blank" rel="noopener" data-i18n="view_project">View on GitHub</a>
+          </li>
+          <li class="card project">
+            <h3 data-i18n="p4_title">Phyrexian Keyboard</h3>
+            <p data-i18n="p4_desc">An Android keyboard app for Magic: The Gathering fans.</p>
+            <a class="link" href="https://github.com/nadarbeihat/font-phyrexian" target="_blank" rel="noopener" data-i18n="view_project">View on GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ HOBBIES ============ -->
+    <section id="hobbies" class="section section-alt">
+      <div class="container">
+        <h2 data-i18n="hobbies_title">Hobbies</h2>
+        <ul class="grid">
+          <li class="card hobby">
+            <h3 data-i18n="hob1_t">Cybersecurity labs</h3>
+            <p data-i18n="hob1">Practicing forensics, cryptography and threat analysis.</p>
+          </li>
+          <li class="card hobby">
+            <h3 data-i18n="hob2_t">Tech writing</h3>
+            <p data-i18n="hob2">Covering national cybersecurity events as a journalist.</p>
+          </li>
+          <li class="card hobby">
+            <h3 data-i18n="hob3_t">Volunteering</h3>
+            <p data-i18n="hob3">Supporting students with disabilities through technology.</p>
+          </li>
+          <li class="card hobby">
+            <h3 data-i18n="hob4_t">Robotics</h3>
+            <p data-i18n="hob4">Exploring embedded systems and SUMO robot logic.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT FORM ============ -->
+    <section id="contact" class="section">
+      <div class="container contact-inner">
+        <div class="contact-info">
+          <h2 data-i18n="contact_title">Contact</h2>
+          <p data-i18n="contact_text">Have a question or an opportunity? Send me a message and I'll reply as soon as I can.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:nada.rbeihat.cs@gmail.com">nada.rbeihat.cs@gmail.com</a></li>
+            <li><a href="tel:+962771045775" dir="ltr">+962 771 045 775</a></li>
+            <li><a href="https://www.linkedin.com/in/nada-al-rbiehat-730678291/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/nadarbeihat" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <label for="name" data-i18n="form_name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" data-i18n-placeholder="form_name_ph" placeholder="Your name" required>
+
+          <label for="email" data-i18n="form_email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" data-i18n-placeholder="form_email_ph" placeholder="you@example.com" required>
+
+          <label for="message" data-i18n="form_message">Message</label>
+          <textarea id="message" name="message" rows="5" data-i18n-placeholder="form_message_ph" placeholder="Write your message here" required></textarea>
+
+          <button type="submit" class="btn btn-primary" data-i18n="form_send">Send message</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer_copy">© 2026 Nada Alrbeihat. Built from scratch with HTML, CSS and JavaScript.</p>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/nada-al-rbiehat-730678291/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/nadarbeihat" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:nada.rbeihat.cs@gmail.com" data-i18n="footer_email">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
